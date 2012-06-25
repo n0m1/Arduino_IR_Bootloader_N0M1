@@ -1,0 +1,10 @@
+We’ve implemented an optical infrared Arduino bootloader based on the common 38kHz infrared remote modualtion.  Using the Asuro as inspiration, our bootloader goes a step further in that it works seamlessly from within the Arduino IDE, utilizing the STK500V2 protocol without modification.As described in detail below, due to hardware specifics and a low carrier frequency, the maximum data rate is 4200 baud and in practice about 4k baud reliably without error.  While not amazingly fast, this results in about 1 min 30 seconds to transfer a moderately large Arduino sketch of 20kb.  With the sketch loaded, the IR hardware also functions as a bidirectional half duplex serial link.  As itemized in the following list, the project as a whole is the sum of it’s parts:
+
+Echo Cancellation Simplex
+Continuous Demodulation
+Demodulator Phase Delay
+USB Transceiver (Software)
+USB Transceiver (Hardware)
+Arduino IR Transceiver
+Arduino Bootloader
+Board Specifications
